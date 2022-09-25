@@ -74,7 +74,7 @@ public class GuessTheWordGame {
 
     protected static String getComputerSelectedWord(final String[] args) {
         final Random random = new Random();
-        final int randomIndex = null != args ? Integer.parseInt(args[0]) : random.nextInt(wordList.size());
+        final int randomIndex = null != args && args.length>0 ? Integer.parseInt(args[0]) : random.nextInt(wordList.size());
         return wordList.get(randomIndex);
     }
 }
